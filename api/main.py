@@ -124,8 +124,10 @@ def search_youtube():
     column_dimension = sheet.column_dimensions[column_letter]
     column_dimension.width = 19.00
 
+    # Change the path to save the Excel file to the /tmp directory
+    excel_file_path = '/tmp/youtube_data.xlsx'
+
     # Save the Excel file
-    excel_file_path = 'youtube_data.xlsx'
     workbook.save(excel_file_path)
 
     result = f"Data exported to 'youtube_data.xlsx'\n"
@@ -135,8 +137,8 @@ def search_youtube():
 @app.route('/download_excel')
 def download_excel():
     try:
-        # Specify the path to the generated Excel file
-        excel_file_path = 'youtube_data.xlsx'
+        # Specify the path to the generated Excel file in the /tmp directory
+        excel_file_path = '/tmp/youtube_data.xlsx'
 
         return send_file(
             excel_file_path,
