@@ -2,23 +2,63 @@
 <html>
 <head>
     <title>vyvs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Add this viewport meta tag -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
     <style>
-        /* New styles for the vyvs text */
+        /* Original desktop styles */
         h1 {
-            position: absolute; /* Position absolutely */
-            top: 20px; /* Adjust the top position */
-            left: 20px; /* Adjust the left position */
-            margin: 0; /* Remove any default margin */
-            color: #fff; /* Text color */
-            background-color: #000; /* Pure black background color */
-            padding: 20px; /* Padding for better spacing */
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            margin: 0;
+            color: #fff;
+            background-color: #000;
+            padding: 20px;
             font-family: 'Roboto', sans-serif;
-            border-bottom: 3px solid #ff6666; /* Pastel red accent border */
+            border-bottom: 3px solid #f32f2f;
         }
-        /* Add margin to move the entire box down */
+
         .custom-form {
-            margin-top: 100px; /* Adjust the margin-top value as needed */
+            margin-top: 100px;
+        }
+
+        /* New styles for mobile */
+        @media screen and (max-width: 768px) {
+            h1 {
+                position: static;
+                background-color: transparent;
+                text-align: center;
+                padding: 10px;
+            }
+
+            .custom-form {
+                margin-top: 20px;
+                text-align: center;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            input[type="text"],
+            select {
+                width: 90%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            input[type="submit"] {
+                background-color: #f32f2f;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                border-radius: 5px;
+            }
         }
     </style>
 </head>
@@ -50,7 +90,6 @@
         <p>{{ result }}</p>
         {% endif %}
 
-        <!-- Add a download link -->
         {% if file_generated %}
         <p><a href="/download_excel">Download Excel File</a></p>
         {% endif %}
