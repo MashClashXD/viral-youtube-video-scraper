@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>vyvs</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        /* New styles for the vyvs text */
+        h1 {
+            position: absolute; /* Position absolutely */
+            top: 20px; /* Adjust the top position */
+            left: 20px; /* Adjust the left position */
+            margin: 0; /* Remove any default margin */
+            color: #fff; /* Text color */
+            background-color: #000; /* Pure black background color */
+            padding: 20px; /* Padding for better spacing */
+            font-family: 'Roboto', sans-serif;
+            border-bottom: 3px solid #ff6666; /* Pastel red accent border */
+        }
+        /* Add margin to move the entire box down */
+        .custom-form {
+            margin-top: 100px; /* Adjust the margin-top value as needed */
+        }
+    </style>
+</head>
+<body>
+    <h1>VyVs</h1>
+    <form method="POST" action="/search" class="custom-form">
+        <label for="api_key">API Key:</label>
+        <input type="text" id="api_key" name="api_key" required><br>
+        <label for="search_term">Search Term:</label>
+        <input type="text" id="search_term" name="search_term" required><br>
+        <label for="time_filter">Upload Date:</label>
+        <select id="time_filter" name="time_filter">
+            <option value="24 Hours">24 Hours</option>
+            <option value="1 Month">1 Month</option>
+            <option value="6 Months">6 Months</option>
+            <option value="1 Year">1 Year</option>
+            <option value="All Time">All Time</option>
+        </select><br>
+        <label for="value_filter">Size of Niche:</label>
+        <select id="value_filter" name="value_filter">
+            <option value="Small (least restrictive)">Small (least restrictive)</option>
+            <option value="Medium (moderately restrictive)">Medium (moderately restrictive)</option>
+            <option value="Large (most restrictive)">Large (most restrictive)</option>
+        </select><br>
+        <input type="submit" value="Search">
+    </form>
+    <div id="result">
+        {% if result %}
+        <p>{{ result }}</p>
+        {% endif %}
+
+        <!-- Add a download link -->
+        {% if file_generated %}
+        <p><a href="/download_excel">Download Excel File</a></p>
+        {% endif %}
+    </div>
+</body>
+</html>
