@@ -1,0 +1,83 @@
+/* styles.css */
+
+/* Apply styles to the title/head */
+h1 {
+    color: #fff; /* Text color */
+    background-color: #000; /* Pure black background color */
+    padding: 20px; /* Padding for better spacing */
+    text-align: center;
+    border-bottom: 3px solid #f32f2f; /* Pastel red accent border */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Apply styles to the form */
+.custom-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #111; /* Dark background color */
+    border: 1px solid #333; /* Dark gray border */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Darker box shadow for depth */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Apply styles to labels */
+label {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #cccccc; /* Slightly darker grey text color */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Apply styles to input fields */
+input[type="text"],
+select {
+    width: 100%;
+    padding-top: 10px;
+    padding: 6px; /* Increased padding */
+    margin-bottom: 15px; /* Increased spacing */
+    border: 1px solid #333; /* Dark gray border */
+    border-radius: 15px;
+    background-color: #222; /* Dark background color */
+    color: #fff; /* Text color */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Apply styles to the submit button */
+input[type="submit"] {
+    background-color: #f32f2f; /* Pastel red accent for the button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Style the result text */
+#result {
+    margin-top: 20px;
+    background-color: #111; /* Dark background color */
+    padding: 20px;
+    color: #fff; /* Text color */
+    border: 1px solid #333; /* Dark gray border */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Darker box shadow for depth */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Style the download link */
+#result a {
+    color: #f32f2f; /* Pastel red accent for the link */
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Set body background color */
+body {
+    background-color: #000; /* Pure black background color */
+    color: #fff; /* Text color */
+    font-family: 'Roboto', sans-serif;
+}
