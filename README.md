@@ -1,6 +1,6 @@
 # Viral Youtube Video Scraper (VyVs)
 
-A web app that uses the YouTube Data API to scrape viral videos based on a chosen keyword and create a spreadsheet to view them.
+A web app that uses the YouTube Data API to scrape viral videos based on a chosen keyword and creates a spreadsheet to view them.
 
 ## Best Practices
 - The spreadsheets are designed to be viewed using a Dynamic Array spreadsheet viewer (eg. Excel365 or Google Sheets)
